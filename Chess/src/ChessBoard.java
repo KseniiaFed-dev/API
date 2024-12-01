@@ -21,13 +21,13 @@ public class ChessBoard {
     }
 
     private boolean isValidRookMove(int fromRow, int fromCol, int toRow, int toCol) {
-        return fromRow == toRow || fromCol == toCol; // Horizontal or vertical only
+        return fromRow == toRow || fromCol == toCol;
     }
 
     private boolean isValidKnightMove(int fromRow, int fromCol, int toRow, int toCol) {
         int rowDiff = Math.abs(fromRow - toRow);
         int colDiff = Math.abs(fromCol - toCol);
-        return (rowDiff == 2 && colDiff == 1) || (rowDiff == 1 && colDiff == 2); // L-shape
+        return (rowDiff == 2 && colDiff == 1) || (rowDiff == 1 && colDiff == 2); 
     }
 
     public boolean moveToPosition(int fromRow, int fromCol, int toRow, int toCol) {
