@@ -32,15 +32,11 @@ public class Weather {
             String jsonResponse = response.toString();
             System.out.println(jsonResponse);
 
-            // Calculate the average temperature
+            
             int sum = 0;
             int count = 0;
 
-            // Example parsing logic, you may need to adjust this based on your JSON structure
-            // Assuming the JSON structure contains temperature values as integers
-            // This is a basic example and may need enhancement based on the actual JSON response format
-            // In a real-world scenario, it's recommended to use a JSON parsing library for robust parsing
-            // Here we are using a simple string manipulation for demonstration purposes
+            
             String[] parts = jsonResponse.split("\"temp\":");
             for (int i = 1; i < parts.length; i++) {
                 int endIndex = parts[i].indexOf(",");
